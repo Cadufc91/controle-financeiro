@@ -35,3 +35,9 @@ const addZeroToDate = (n: number): string => {
         return `${n}`;
     }
 }
+
+export const formatCurrentMonth = (curretMonth: string): string => {
+    let [year, month] = curretMonth.split('-');
+    let months = ['Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    return `${months[parseInt(month) -1]} de ${year}`;
+}
